@@ -8,7 +8,7 @@ import com.epam.sukhoverka.model.Person;
 public class Client {
 
     public static void main(String[] args) {
-        DataSourceFactory dataSourceFactory = DataSourceFactoryFactory.getDataSourceFactory(DataSourceFactoryFactory.FactoryType.DB);
+        DataSourceFactory dataSourceFactory = DataSourceFactoryFactory.getDataSourceFactory(DataSourceFactoryFactory.FactoryType.FILE);
         DataSource dataSource = dataSourceFactory.getDataSource();
 
         dataSource.writePerson(new Person("scrooge"));
