@@ -25,7 +25,7 @@ public class FileDataSource implements DataSource {
 
     }
 
-    public Person readPerson() {
+    public Person readPerson(String name) {
         Person person = null;
 
         try(FileInputStream fin = new FileInputStream(pathToFile);
@@ -40,9 +40,5 @@ public class FileDataSource implements DataSource {
             e.printStackTrace();
         }
         return person;
-    }
-
-    public Person readPerson(String name) {
-        return readPerson();
     }
 }

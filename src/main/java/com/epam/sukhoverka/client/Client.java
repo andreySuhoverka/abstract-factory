@@ -11,8 +11,8 @@ public class Client {
         DataSourceFactory dataSourceFactory = DataSourceFactoryFactory.getDataSourceFactory(DataSourceFactoryFactory.FactoryType.FILE);
         DataSource dataSource = dataSourceFactory.getDataSource();
 
-        dataSource.writePerson(new Person("scrooge"));
-        Person p = dataSource.readPerson();
+        dataSource.writePerson(new Person("scrooge", 21));
+        Person p = dataSource.readPerson("scrooge");
         assert p.getName().equals("scrooge");
     }
 }
